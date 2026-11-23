@@ -1,6 +1,19 @@
 # dotfiles
 
-The stuff I keep in `$HOME/.config/`.
+Configs for the tools I use, linked into `$HOME` by `install.sh`.
+
+## Install
+
+```sh
+./install.sh
+```
+
+The script links `ghostty`, `nvim`, `skhd`, `tmux` and `zsh` into
+`${XDG_CONFIG_HOME:-$HOME/.config}`, links the zsh startup files to `$HOME`,
+and links `.clang-format` to `$HOME/.clang-format`. Existing files are moved to
+`<name>.backup.<timestamp>` first.
+
+The bootstrap repo runs this installer automatically.
 
 ## Versions
 
@@ -14,8 +27,8 @@ Last tested with:
 
 ## License
 
-Unless noted otherwise, files in this repository are licensed under the [MIT
-License](LICENSE). Some files are adapted from third-party sources and remain under
+Unless noted otherwise, files in this repository are licensed under the MIT
+License (LICENSE). Some files are adapted from third-party sources and remain under
 their original licenses, as noted in their headers:
 
 - `ghostty/shaders/cursor_warp.glsl`: adapted from
